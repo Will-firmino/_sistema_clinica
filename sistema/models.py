@@ -14,3 +14,6 @@ class Paciente(models.Model):
     mensagem = models.TextField(blank=True)
     ativo = models.BooleanField(default=False)
     imagem = models.ImageField(upload_to='img/%Y/%m/')
+
+    def __str__(self):
+        return f'{self.nome} {self.sobrenome}'

@@ -10,6 +10,9 @@
 6. Parar criar um novo app -> python manage.py startapp sistema
 7. Parar criar um superuser -> python manage.py createsuperuser
 8. Para alterar a senha, caso você esqueça -> python manage.py changepassword nomedousuario
+9. Para instalar o pillow no projeto -> python -m pip install Pillow
+10. Para gerar o pacote de migração -> python manage.py makemigrations
+11. Para rodar as alterações desse pacote -> python manage.py migrate
 
 # PRINCIPAIS ARQUIVOS/PASTAS DO PROJECT
 1. settings.py -> é o arquivo de configuração do projeto.
