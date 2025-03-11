@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+# Importação do módulo models.py
+from sistema import models
+
+
+# Aqui fica o registro do model do Paciente
+@admin.register(models.Paciente)

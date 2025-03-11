@@ -19,3 +19,16 @@
 # DOCUMENTAÇÃO
 1. `urls` -> https://docs.djangoproject.com/en/5.1/topics/http/urls/ 
 2. `settings` -> https://docs.djangoproject.com/en/5.1/topics/settings/ , https://docs.djangoproject.com/en/5.1/ref/settings/
+
+
+
+# Criação das entidades do sistema
+[PACIENTE]
+nome
+sobrenome
+email
+telefone
+criação
+mensagem
+ativo
+imagem
