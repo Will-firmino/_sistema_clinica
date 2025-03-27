@@ -36,7 +36,7 @@ class Medico(models.Model):
     imagem = models.ImageField(upload_to='img/%Y/%m', blank=True)
     ativo = models.BooleanField(default=True)
     mensagem = models.TextField(blank=True)
-    especialidade_id = models.ForeignKey(Especialidade, on_delete=models.CASCADE)
+    especialidade_id = models.ForeignKey(Especialidade, on_delete=models.CASCADE, default='1')
 
     def __str__(self):
         return f'{self.nome} {self.sobrenome}'
@@ -58,4 +58,4 @@ class Consulta(models.Model):
                     )
     
     def __str__(self):
-        return 'Consulta agenda com sucesso.'
+        return f'Consulta {self.status} com sucesso.'
