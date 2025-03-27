@@ -8,4 +8,6 @@ app_name = 'sistema'
 # Lista responsável por organizar as urls do sistema.
 urlpatterns = [
     path('', views.index, name='index'),
+    path('teste/', views.teste),
 ]
+

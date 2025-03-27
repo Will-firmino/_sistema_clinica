@@ -8,4 +8,12 @@ def index(request):
         'global/base.html',
     )
 
+# Testando
+def teste(request):
+    return render(
+        request,
+        'global/teste.html'
+    )
+
+
 # REQUEST - RESPONSE - RENDER
