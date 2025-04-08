@@ -64,6 +64,8 @@ mensagem
 /sistema/cadastro
 
 
-# Criar uma view que vai renderizar um arquivo chamado seunome.html.
-# No seunome.html coloque um h1 com o seu nome.
-# Em seguida, crie uma url e chame esse arquivo seunome.html
+## AULA DO DIA 08/04/2025
+1. INJEÇÃO DE CONTEXTO -> Utilizando o dicionário `context` para acessar todos os objetos.
+- class Paciente (Modelo - Tabela)
+- acessar todos os objetos(instâncias) que foram criadas a partir da class Paciente.
+- Renderizar todos esses contatos no arquivo listar.html

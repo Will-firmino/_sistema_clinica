@@ -24,7 +24,6 @@ class Especialidade(models.Model):
 
     def __str__(self):
         return self.nome
-    
 
 class Medico(models.Model):
     nome = models.CharField(max_length=50)
