@@ -1,1 +1,53 @@
-<h1>Listagem de pacientes</h1>
+{% block conteudo %}
+    <div class="responsive-table">
+        <table class="pacientes-table">
+            <caption class="table-caption">
+                Listagem de pacientes
+            </caption>
+
+            <thead>
+                <tr class="table-row table-row-header">
+                    <th class="table-header">ID</th>
+                    <th class="table-header">Nome</th>
+                    <th class="table-header">Sobrenome</th>
+                    <th class="table-header">Email</th>
+                    <th class="table-header">Telefone</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for paciente in pacientes %}
+                    <tr class="table-row">
+                        <td class="table-cel"> {{ paciente.id }} </td>
+                        <td class="table-cel"> {{ paciente.nome }}  </td>
+                        <td class="table-cel"> {{ paciente.sobrenome }} </td>
+                        <td class="table-cel"> {{ paciente.email }} </td>
+                        <td class="table-cel"> {{ paciente.telefone }} </td>
+                    </tr>
+                
+
+
+                {% endfor %}
+            </tbody>
+
+
+        </table>
+    </div>
+
+
+
+
+
+
+{% endblock conteudo %}
+
+
+
+
+{% comment %}
+{% block conteudo %}
+    {% for paciente in pacientes %}
+        {{ paciente.nome }} <br>  {% comment %}  Utilizando interpolação (Acessando um objto e um atritubo)
+    {% endfor %}
+{% endblock conteudo %}
+{% endcomment %} 
