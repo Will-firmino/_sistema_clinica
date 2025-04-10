@@ -8,6 +8,7 @@ app_name = 'sistema'
 # Lista responsável por organizar as urls do sistema.
 urlpatterns = [
     path('', views.index, name='index'),
-    path('listar/', views.listarPacientes, name='listar'),
+    path('pacientes/', views.listarPacientes, name='pacientes'),
+    path('medicos/', views.listarMedicos, name='medicos'),
 ]
 
