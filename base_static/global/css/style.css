@@ -1,0 +1,18 @@
+/* 
+ Estilizações das tabelas de listagem 
+*/
+
+.responsive-table {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table-caption {
+    font-size: 50px;
+    font-weight: bold;
+    padding: 35px;
+}
+
+.table-row {
+    
+}
