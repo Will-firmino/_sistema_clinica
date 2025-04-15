@@ -26,7 +26,7 @@ def criarPaciente(request):
         if form.is_valid():
             # Se os dados forem válidos, é salvo um novo paciente no BD.
             form.save() 
-            return redirect('pacientes')
+            return redirect('/pacientes')
     else: 
         # Se uma requisição for do tipo GET, exibi um formulario vazio.
         form = PacienteForm()
