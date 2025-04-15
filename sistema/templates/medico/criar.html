@@ -1,0 +1,8 @@
+<h1>Cadastrar Médico</h1>
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Salvar</button>
+
+</form>
