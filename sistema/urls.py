@@ -9,9 +9,10 @@ app_name = 'sistema'
 urlpatterns = [
     path('', views.index, name='index'),
     path('pacientes/', views.listarPacientes, name='pacientes'),
-    path('pacientes/novo', views.criarPaciente, name='criar_paciente'),
+    path('pacientes/novo/', views.criarPaciente, name='criar_paciente'),
+    path('pacientes/perfil/<int:paciente_id>', views.perfilPaciente, name='perfil_paciente'),
     path('medicos/', views.listarMedicos, name='medicos'),
-    path('medicos/novo', views.criarMedico, name ='criar_medico')
+    path('medicos/novo/', views.criarMedico, name ='criar_medico')
 
 ]
 

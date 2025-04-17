@@ -1,7 +1,8 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import get_object_or_404, render, redirect
 from sistema.forms import PacienteForm
 from sistema.models import Paciente
 
+# View referente a listagem dos pacientes
 def listarPacientes(request):
     pacientes = Paciente.objects.all() # Variável pacientes está guardando todos os objetos da tabela Paciente.
 
@@ -35,4 +36,21 @@ def criarPaciente(request):
         request,
         'paciente/cadastro.html',
         {'form': form},
+    )
+
+#View referente ao paciente Unico(perfil)
+def perfilPaciente(request, paciente_id):
+    pacienteUnico = get_object_or_404( # Método utilizado para mostrar o paciente ou retornar erro 404
+        Paciente, pk=paciente_id # Paciente é o model, pk=paciente_id está definindo através de qual campo(coluna) o objeto sera retornado.
+    )
+    titulo = f'{pacienteUnico.nome} {pacienteUnico.sobrenome}' # Cria um título com o nome e sobrenome do paciente atual
+    context = {
+        'pacienteUnico': pacienteUnico,
+        'titulo': titulo,
+    }
+
+    return render(
+        request,
+        'paciente/perfil.html',
+        context,
     )
