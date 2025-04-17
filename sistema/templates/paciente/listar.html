@@ -18,7 +18,7 @@
     <tbody>
       {% for paciente in pacientes %}
       <tr class="table-row">
-        <td class="table-cel"><a class="table-link" href=" {% url 'perfil_paciente:perfil_paciente:' perfil_paciente.id %}"> {{ paciente.id }} </a></td>
+        <td class="table-cel"><a class="table-link" href="{% url 'sistema:perfil_paciente' paciente.id %}"> {{ paciente.id }} </a></td>
         <td class="table-cel"> {{ paciente.nome }} </td>
         <td class="table-cel"> {{ paciente.sobrenome }} </td>
         <td class="table-cel"> {{ paciente.email }} </td>
