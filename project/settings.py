@@ -111,6 +111,16 @@ STATICFILES_DIRS = (
     BASE_DIR / 'base_static',
 )
 
+# MEDIA_URL -> É um caminho URL para acessar imagens.
+MEDIA_URL = 'media/'
+
+# MEDIA_ROOT -> É um caminho onde os arquivos realmente serão salvos.
+MEDIA_ROOT = BASE_DIR / 'media'
+
+# STATIC_ROOT -> É um caminho para onde os arquivos estáticos são coletados.
+STATIC_ROOT = BASE_DIR / 'static'
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 

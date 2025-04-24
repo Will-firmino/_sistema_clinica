@@ -1,0 +1,117 @@
+/* 
+    Alterações Gerais 
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*Inclui o padding e a borda no tamanho total do elemento.*/
+}
+
+:root {
+    --color-primary: #6278f7;
+    --color-secondary: #2e2e2e;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 
+    Customização do header 
+*/
+.header {
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.btn-link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+    font-size: 18px;
+    padding: 20px;
+    transition: color 0.3s;
+}
+
+.btn-link:hover {
+    background-color: var(--color-primary);
+}
+
+.logo img{
+    display: block;
+    height: 120px;
+}
+
+/* 
+    Customização do hero 
+*/
+.hero {
+    background: linear-gradient(180deg, #64b4ff 0%, #339cff 52%);
+    padding: 120px 0;
+    color: #fff;
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.hero-image {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.hero-image img {
+    max-height: 555px;
+    max-width: 100%;
+}
+
+
+/* 
+    Customização do footer 
+*/
+
+.footer {
+    background-color: #0b3b68;
+    color: #e7ebef;
+    padding: 20px 0;
+    text-align: center;
+}
+
+
+
+/* 
+ Estilizações das tabelas de listagem 
+*/
+
+.responsive-table {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table-caption {
+    font-size: 50px;
+    font-weight: bold;
+    padding: 35px;
+}
+
+.table-row {
+    
+}

@@ -12,6 +12,7 @@
         <th class="table-header">Sobrenome</th>
         <th class="table-header">Email</th>
         <th class="table-header">Telefone</th>
+        <th class="table-header">Imagem</th>
       </tr>
     </thead>
 
@@ -23,6 +24,14 @@
         <td class="table-cel"> {{ paciente.sobrenome }} </td>
         <td class="table-cel"> {{ paciente.email }} </td>
         <td class="table-cel"> {{ paciente.telefone }} </td>
+        <td class="table-cel"> 
+          {% if paciente.imagem %}
+            <img src="{{ paciente.imagem.url }}" alt="Imagem do paciente" style="max-height: 80px;">
+          {% else %}
+            sem imagem
+          {% endif %}
+        </td>
+
       </tr>
 
       {% endfor %}
