@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head> {% include "global/partials/_head.html" %} </head>
+
+<body>
+    <header> {% include "global/partials/_header.html" %} </header>
+
+<h1>Cadastrar Médico</h1>
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Salvar</button>
+
+</form>
+<footer> {% include "global/partials/_footer.html" %} </footer>
+</body>
+
+</html>

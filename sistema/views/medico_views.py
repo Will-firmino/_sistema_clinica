@@ -26,6 +26,6 @@ def criarMedico(request):
         return redirect('/medicos')
     else:
         form = MedicoForm()
-    return render(request, 'medico/criar.html', {'form': form})
+    return render(request, 'medico/cadastro.html', {'form': form})
 
 

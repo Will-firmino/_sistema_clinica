@@ -1,9 +1,28 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head> {% include "global/partials/_head.html" %} </head>
 <body>
     <header> {% include "global/partials/_header.html" %} </header>
-    <main>{% include "paciente/listar.html" %}</main>
+    <div>
+        <section class="hero">
+          <div class="container">
+            <div class="hero-content">
+              <h1 class="hero-logo">
+              Consulta.me
+              </h1>
+      
+              <h2 class="hero-title">Encontre profissionais de <span>diversas especialidades</span></h2>
+              <p class="hero-subtitle">e agende sua consulta com facilidade</p>
+            </div>
+      
+            <div class="hero-image">
+              <img src={% static "/global/assets/medico.png" %} alt="Médico com máscara">
+              <img src={% static "/global/assets/medica.png" %} alt="Médica com estetoscópio">
+            </div>
+          </div>
+        </section>
+      </div>
     <footer> {% include "global/partials/_footer.html" %} </footer>
 </body>
 </html>

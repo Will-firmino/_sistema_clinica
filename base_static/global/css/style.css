@@ -1,117 +1,390 @@
-/* 
-    Alterações Gerais 
-*/
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /*Inclui o padding e a borda no tamanho total do elemento.*/
-}
-
-:root {
-    --color-primary: #6278f7;
-    --color-secondary: #2e2e2e;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 0;
-}
-
-body {
-    font-family: sans-serif;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Public Sans", sans-serif;
+    line-height: 1.5;
     display: flex;
     flex-direction: column;
-}
-
-/* 
-    Customização do header 
-*/
-.header {
-    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
-}
-
-.header-container {
+    min-height: 100vh;
+  }
+  
+  /* 
+      Estilização do header
+  */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .header {
+    /* padding: 20px 0; */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    
+  }
+  
+  .header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0;
-}
-
-.btn-link {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: var(--color-secondary);
-    font-size: 18px;
-    padding: 20px;
-    transition: color 0.3s;
-}
-
-.btn-link:hover {
-    background-color: var(--color-primary);
-}
-
-.logo img{
-    display: block;
+  }
+  
+  .logo img {
     height: 120px;
-}
-
-/* 
-    Customização do hero 
-*/
-.hero {
+    display: block;
+  }
+  
+  .nav-left,
+  .nav-right {
+    list-style: none;
+  }
+  
+  /* Não achei essa classe  */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
+  
+  .navbar-form {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  
+  .btn-link {
+    background: none;
+    border: none;
+    color: #333;
+    padding: 10px 0;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+    padding: 0 15px;
+  }
+  
+  .btn-link:hover {
+    color: #2979ff;
+  }
+  
+  /* 
+      Estilização da seção principal
+  */
+  .hero {
     background: linear-gradient(180deg, #64b4ff 0%, #339cff 52%);
     padding: 120px 0;
     color: #fff;
-}
-
-.hero .container {
+  }
+  
+  .hero .container {
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
-}
-
-.hero-image {
+  }
+  
+  .hero-content {
+    max-width: 50%;
+    padding-right: 20px;
+  }
+  
+  .hero-logo {
+    font-size: 81px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #0b3b60;
+    display: flex;
+    align-items: center;
+  }
+  
+  .hero-logo img {
+    width: 60px;
+    margin-right: 15px;
+  }
+  
+  .hero-title {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #e7ebef;
+  }
+  
+  .hero-title span {
+    color: #0b3b60;
+  }
+  
+  .hero-subtitle {
+    font-size: 35px;
+    line-height: 1.2;
+    color: #e7ebef;
+  }
+  
+  .hero-image {
     display: flex;
     align-items: flex-end;
     justify-content: center;
-}
-
-.hero-image img {
+    flex-grow: 1;
+  }
+  
+  .hero-image img {
     max-height: 555px;
     max-width: 100%;
-}
-
-
-/* 
-    Customização do footer 
-*/
-
-.footer {
-    background-color: #0b3b68;
+  }
+  
+  .hero-image img:last-child {
+    margin-left: -30px;
+    max-height: 493px;
+    max-width: 90%;
+  }
+  
+  /* 
+      Estilização do footer
+  */
+  
+  .footer {
+    background-color: #0b3b60;
     color: #e7ebef;
     padding: 20px 0;
     text-align: center;
-}
-
-
-
-/* 
- Estilizações das tabelas de listagem 
-*/
-
-.responsive-table {
+    margin-top: auto;
+  }
+  
+  .footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer img {
+    height: 20px;
+    margin-right: 20px;
+  }
+  
+  /* 
+      Estilização do Login
+  */
+  
+  .card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0px 7px 50px rgba(12, 5, 83, 0.09);
+    margin: 20px 0;
+  }
+  
+  .form-card {
+    min-width: 800px;
     width: 100%;
-    overflow-x: auto;
-}
-
-.table-caption {
-    font-size: 50px;
+  }
+  
+  .title {
+    color: #0b3b60;
+    font-size: 28px;
     font-weight: bold;
-    padding: 35px;
-}
-
-.table-row {
+    margin-bottom: 30px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    color: #333;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #81b7e1;
+    background-color: #f3f9fa;
+    color: #6b6e71;
+  }
+  
+  .btn {
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary {
+    background-color: #339cff;
+    color: #fff;
+  }
+  
+  /* 
+      Estilização do Login Efetuado
+  */
+  
+  .wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .main-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 20px;
+  }
+  
+  .nav-left,
+  .nav-right {
+    list-style: none;
+  }
+  
+  .arrow-down {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #333;
+    margin-left: 5px;
+  }
+  
+  .header .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #339cff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    z-index: 1;
+    min-width: 150px;
+    white-space: nowrap;
+  }
+  
+  .header .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .header .dropdown-menu li {
+    width: 100%;
+    text-decoration: none;
+  }
+  
+  .header .dropdown-menu a,
+  .header .dropdown-menu button {
+    padding: 10px 20px;
+    color: #fff;
+    text-transform: uppercase;
+    display: block;
+    transition: background-color 0.3s;
+    border: none;
+    background: none;
+    text-align: left;
+    cursor: pointer;
+  }
+  
+  .header .dropdown-menu a:hover,
+  .header .dropdown-menu button:hover {
+    background-color: #2979ff;
+    color: #fff;
+  }
+  
+  .header .dropdown-menu form {
+    margin: 0;
+  }
+  
+  /* 
+      Estilização da listagem de médicos
+  */
+  
+  .table-controls {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+  
+  .table-controls a {
+    text-decoration: none;
+  }
+  
+  .btn-tertiary {
+    background-color: #319e0b;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .btn-icon {
+    height: 16px;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  
+  .tabela {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    table-layout: fixed;
+  }
+  
+  .tabela th,
+  .tabela td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #339cff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .tabela th {
+    font-weight: bold;
+    color: #339cff;
+  }
+  
+  .tabela td img {
+    height: 20px;
+  }
+  
+  .btn-edit,
+  .btn-delete {
+    padding: 20px;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  
+  .buttons {
+      display: flex;
+      gap: 10px;
+      flex-direction: row;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+    }
     
-}
+    .buttons button {
+      font-size: 16px;
+    }
+    
+    .buttons a {
+      text-decoration: none;
+    }
+  
+    .btn-secondary {
+      background-color: #ff3333;
+      color: #fff;
+    }
